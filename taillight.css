@@ -997,6 +997,9 @@
 
 .rounded { border-radius: 8px; }
 .shadow { box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2); }
+/* TODO: add to media queries */
+.shadow-small { box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2); }
+.shadow-large { box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2); }
 .light-shadow { box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.2); }
 .light-shadow-small { box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.2); }
 

@@ -106,8 +106,8 @@ img {
 
 /*===== NAV =====*/
 .off-screen-menu {
-    right: -100%;
-    transition: right 0.3s ease-in-out;
+    right: -25vw;
+    transition: right 0.5s ease-in-out;
 }
 
 .off-screen-menu.show {

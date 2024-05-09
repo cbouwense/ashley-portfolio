@@ -22,11 +22,11 @@
           </nav>
           
           <!-- Off screen menu -->
-          <div class="off-screen-menu fixed top-0 w-25vw h-100vh bg-white">
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#contact">Contact</a></li>
+          <div class="off-screen-menu shadow-large fixed top-0 w-25vw h-100vh bg-white p-3rem">
+            <ul class="flex column gap-1rem">
+              <li class="fs-2rem"><a href="#about">About</a></li>
+              <li class="fs-2rem"><a href="#skills">Skills</a></li>
+              <li class="fs-2rem"><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </header>
@@ -143,12 +143,14 @@
           const menuToggle = document.querySelector('#hamburger-menu');
           const offScreenMenu = document.querySelector('.off-screen-menu');
 
-          menuToggle.addEventListener('mouseover', () => {
-            offScreenMenu.classList.toggle('show');
+          menuToggle.addEventListener('click', () => {
+            offScreenMenu.classList.add('show');
           });
-          
-          // Make it so that when the user clicks on a link in the menu, or moves
-          // their mouse off of the menu, it closes.
+
+          menuToggle.addEventListener('mouseover', () => {
+            offScreenMenu.classList.add('show');
+          });
+        
           offScreenMenu.addEventListener('mouseleave', () => {
             offScreenMenu.classList.remove('show');
           });

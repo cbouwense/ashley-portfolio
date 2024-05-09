@@ -114,6 +114,11 @@ img {
     right: 0;
 }
 
+.off-screen-menu li a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .hamburger-menu {
     right: 0;
 }

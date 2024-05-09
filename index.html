@@ -9,25 +9,24 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website complete</title>
+        <title>Ashley Mazzarella</title>
     </head>
     <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-          <nav>
-            <div class="hamburger-menu">
-              <span></span>
-              <span></span>
-              <span></span>
-              <input type="checkbox" hidden id="menu-toggle">
+        <header class="top-0 left-0 w-100 h-4rem fixed z-5 bg-white">
+          <nav class="h-100 p-1rem flex justify-end">
+            <div id="hamburger-menu" class="right-0 flex column flex-center justify-between gap-0-25rem h-4rem w-4rem bg-white p-0-5rem">
+              <span class="patty w-100 h-0-5rem"></span>
+              <span class="patty w-100 h-0-5rem"></span>
+              <span class="patty w-100 h-0-5rem"></span>
             </div>
-            </nav>
+          </nav>
           
-          <div class="off-screen-menu">
+          <!-- Off screen menu -->
+          <div class="off-screen-menu fixed top-0 w-25vw h-100vh bg-white">
             <ul>
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </header>
@@ -139,5 +138,31 @@
                 </div>
             </section>
         </main>
+
+        <script>
+          const menuToggle = document.querySelector('#hamburger-menu');
+          const offScreenMenu = document.querySelector('.off-screen-menu');
+
+          menuToggle.addEventListener('mouseover', () => {
+            offScreenMenu.classList.toggle('show');
+          });
+          
+          // Make it so that when the user clicks on a link in the menu, or moves
+          // their mouse off of the menu, it closes.
+          offScreenMenu.addEventListener('mouseleave', () => {
+            offScreenMenu.classList.remove('show');
+          });
+
+          offScreenMenu.addEventListener('click', () => {
+            offScreenMenu.classList.remove('show');
+          });
+
+          // or if they hit the escape key
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              offScreenMenu.classList.remove('show');
+            }
+          });
+      </script>
     </body>
 </html>
